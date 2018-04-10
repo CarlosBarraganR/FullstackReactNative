@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Platform, TextInput, KeyboardAvoidingView } from 'react-native';
+import Input from './components/Input';
 
 export default class App extends React.Component {
   render() {
@@ -9,13 +10,8 @@ export default class App extends React.Component {
         <Text style={styles.textSub}>Cloudy</Text>
         <Text style={styles.textNumber}>24°</Text>
 
-        <TextInput
-          autoCorrect={false}
-          placeholder="Search any city"
-          placeholderTextColor="white"
-          style={styles.textInput}
-          clearButtonMode="always"
-        />
+        <Input placeholderColor="white" placeholder="Search any U.S. city" />
+
       </KeyboardAvoidingView>
     );
   }
@@ -63,15 +59,5 @@ const styles = StyleSheet.create({
           },
           }),
         fontSize: 28
-        },
-      textInput: {
-        backgroundColor: '#666',
-        color: 'white',
-        height: 40,
-        width: 300,
-        marginTop: 20,
-        marginHorizontal: 20,
-        paddingHorizontal: 10,
-        alignSelf: 'center',
-      },
+        }
   });
