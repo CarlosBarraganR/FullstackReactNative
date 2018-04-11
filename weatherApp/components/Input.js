@@ -10,6 +10,7 @@ export default class Input extends React.Component {
           placeholderTextColor={this.props.placeholderColor}
           style={styles.textInput}
           clearButtonMode="always"
+          underlineColorAndroid="transparent"
         />
     );
   }
